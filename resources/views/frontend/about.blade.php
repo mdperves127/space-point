@@ -2,6 +2,10 @@
 @section('about')
     active
 @endsection
+
+@section('title')
+    About | Solystnbiler
+@endsection
 @section('frontend_content')
 
 

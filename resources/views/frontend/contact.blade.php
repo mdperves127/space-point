@@ -2,6 +2,10 @@
 @section('contact')
     active
 @endsection
+
+@section('title')
+    Contact | Solystnbiler
+@endsection
 @section('frontend_content')
 
 <!-- sell-car start -->

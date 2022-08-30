@@ -1,4 +1,8 @@
 @extends('layouts.frontend_app')
+
+@section('title')
+    Sell Car | Solystnbiler
+@endsection
 @section('frontend_content')
 
 

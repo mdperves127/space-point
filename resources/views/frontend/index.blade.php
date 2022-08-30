@@ -2,6 +2,9 @@
 @section('index')
   active
 @endsection
+@section('title')
+    Solystnbiler
+@endsection
 @section('frontend_content')
 
 <!-- banner start -->
@@ -40,8 +43,8 @@
             <div class="col-lg-1"></div>
             <div class="col-lg-5">
                 <div class="search-bar">
-                    <form action="">
-                        <input type="search" id="search" name="" class="search-filed" placeholder="Search Here">
+                    <form action="{{ route('car.filter') }}" method="GET">
+                        <input type="text" id="search" name="filter[name]" class="search-filed" placeholder="Search Here">
                         <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </div>

@@ -4,7 +4,7 @@ active
 @endsection
 
 @section('title')
-    All Cars | Solystnbiler
+    Search Result | Solystnbiler
 @endsection
 @section('frontend_content')
 
@@ -13,20 +13,11 @@ active
     <div class="container">
         <div class="row car-cart-header">
             <div class="col-lg-12">
-                <h2 class="car-heading">All Cars</h2>
-            </div>
-            <div class="col-lg-7"></div>
-            <div class="col-lg-5">
-                <div class="search-bar">
-                    <form action="{{ route('car.filter') }}" method="GET">
-                        <input type="text" id="search" name="filter[name]" class="search-filed" placeholder="Search Here">
-                        <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                </div>
+                <h2 class="car-heading">Search Result</h2>
             </div>
         </div>
         <div class="row">
-            @foreach ($cars as $car)
+            @forelse ($cars as $car)
             <div class="col-lg-3">
                 <div class="cart">
                     <div class="img-part">
@@ -58,7 +49,9 @@ active
                     </div>
                 </div>
             </div>
-            @endforeach
+            @empty
+            <span class="text-center text-warning">No data found</span>
+            @endforelse
         </div>
         {{-- <div class="row pagination text-center">
             <nav aria-label="Page navigation example">

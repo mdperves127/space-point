@@ -7,6 +7,8 @@ use App\Models\Car;
 use App\Models\Contact;
 use App\Models\Sell_car;
 use Illuminate\Http\Request;
+use Spatie\QueryBuilder\QueryBuilder;
+use Spatie\QueryBuilder\AllowedFilter;
 
 class FrontendController extends Controller
 {
@@ -62,5 +64,12 @@ class FrontendController extends Controller
             ]);
         }
         return back()->with('contact_message', '✔️ Successfully send your message.');
+    }
+    public function carfilter() {
+        $cars = QueryBuilder::for(Car::class)
+            ->allowedFilters(['name'])
+            ->allowedSorts('name')
+            ->get();
+            return view('frontend.filter_result', compact('cars'));
     }
 }

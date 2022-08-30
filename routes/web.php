@@ -23,6 +23,8 @@ Route::get('contact', [App\Http\Controllers\FrontendController::class, 'contact'
 Route::post('/contact/post', [App\Http\Controllers\FrontendController::class, 'contactpost'])->name('contact.post');
 Route::post('/sell/car/post', [App\Http\Controllers\FrontendController::class, 'sellcarpost'])->name('sell.car.post');
 
+Route::get('/car/filter', [App\Http\Controllers\FrontendController::class, 'carfilter'])->name('car.filter');
+
 // FrontendController End
 
 

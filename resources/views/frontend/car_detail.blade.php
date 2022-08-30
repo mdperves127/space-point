@@ -2,6 +2,9 @@
 @section('car')
 active
 @endsection
+@section('title')
+    {{ $details->name }} | Solystnbiler
+@endsection
 @section('frontend_content')
 
 <!-- car-details start -->
