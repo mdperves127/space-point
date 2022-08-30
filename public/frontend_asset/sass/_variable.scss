@@ -1,0 +1,11 @@
+$gray : #999999;
+$black : #000000;
+$blue : #0099D8;
+
+@mixin transition($duration) {
+    -webkit-transition: all linear $duration;
+    -moz-transition: all linear $duration;
+    -ms-transition: all linear $duration;
+    -o-transition: all linear $duration;
+    transition: all linear $duration;
+}

@@ -1,0 +1,114 @@
+#about-banner {
+    padding: 150px 0px;
+
+    .about-banner-heading {
+        text-align: center;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 26px;
+        color: #222222;
+        position: relative;
+        padding-bottom: 60px;
+
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: 45px;
+            left: 50%;
+            height: 2px;
+            width: 12%;
+            transform: translateX(-50%);
+            background-color: $blue;
+        }
+    }
+
+    .text-part {
+        padding: 50px 0;
+
+        .section-title {
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 26px;
+            color: #222222;
+            position: relative;
+            padding-bottom: 60px;
+
+            &::after {
+                position: absolute;
+                content: '';
+                bottom: 45px;
+                left: 0;
+                height: 2px;
+                width: 20%;
+                background-color: $blue;
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            color: #000000;
+        }
+
+        h6 {
+            padding-top: 30px;
+        }
+    }
+
+}
+
+#about-process {
+    padding: 60px 0px 120px;
+
+    .process-heading {
+        text-align: center;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 26px;
+        color: #222222;
+        position: relative;
+        padding-bottom: 60px;
+
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: 45px;
+            left: 50%;
+            height: 2px;
+            width: 12%;
+            transform: translateX(-50%);
+            background-color: $blue;
+        }
+    }
+
+    .content {
+        text-align: center;
+        padding: 30px 70px;
+        background: #FFFFFF;
+        height: 270px;
+        box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.06);
+
+        .img-part {
+            height: 110px;
+            padding-bottom: 10px;
+            overflow: hidden;
+        }
+
+
+        h5 {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            color: #000000;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: center;
+            color: #777777;
+        }
+    }
+}

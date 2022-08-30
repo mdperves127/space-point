@@ -1,0 +1,134 @@
+#contact {
+    padding: 150px 0px 100px;
+
+    .sell-car-heading {
+        text-align: center;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 26px;
+        color: #222222;
+        position: relative;
+        padding-bottom: 60px;
+
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: 45px;
+            left: 50%;
+            height: 2px;
+            width: 12%;
+            transform: translateX(-50%);
+            background-color: $blue;
+        }
+    }
+
+    .input-group {
+        input {
+            width: 100%;
+            border: none;
+            height: 56px;
+            background: #FFFFFF;
+            border: 2px solid rgba(153, 153, 153, 0.25);
+            border-radius: 5px;
+            padding: 0px 20px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 26px;
+            color: #999999;
+            margin-bottom: 20px;
+
+            &::placeholder {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 26px;
+                color: #999999;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            border: none;
+            height: 166px;
+            background: #FFFFFF;
+            border: 2px solid rgba(153, 153, 153, 0.25);
+            border-radius: 5px;
+            padding: 20px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 26px;
+            color: #999999;
+            margin-bottom: 20px;
+            resize: none;
+
+            &::placeholder {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 26px;
+                color: #999999;
+            }
+        }
+    }
+
+
+
+    .submit-group {
+        .submit-btn {
+            width: 100%;
+            height: 56px;
+            background: linear-gradient(89.33deg, rgba(1, 155, 219, 0.98) -0.6%, rgba(13, 180, 248, 0.98) 90.25%);
+            box-shadow: 0px 4px 20px rgba(0, 153, 216, 0.2);
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 26px;
+            color: #FFFFFF;
+            border: none;
+        }
+    }
+
+}
+
+#contact-text {
+    padding: 50px 0px 150px;
+
+    .img-box {
+        padding: 50px;
+    }
+
+    .text-box {
+        p {
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 36px;
+            color: #222222;
+            padding: 0px 30px;
+        }
+    }
+
+    .box-one,
+    .box-two,
+    .box-three {
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: "";
+            height: 150px;
+            width: 2px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #777777;
+
+        }
+    }
+
+    .box-two,
+    .box-three {
+        .text-box {
+            p {
+                line-height: 26px;
+            }
+        }
+    }
+}

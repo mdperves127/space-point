@@ -1,0 +1,114 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+* {
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+html,
+body {
+    font-family: 'Rubik', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Change text & background color */
+
+
+a,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+button:hover,
+button:focus,
+button:active {
+    outline: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul,
+ol {
+    padding-left: 0px;
+    list-style: none;
+    margin-bottom: 0px;
+}
+
+
+
+
+.sell-btn {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    padding: 15px 25px;
+    border: 1px solid $blue;
+    box-shadow: 0px 5px 20px rgba(3, 158, 222, 0.2);
+    border-radius: 5px;
+    @include transition(.3s);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(84.43deg, #0099D8 0%, #0EB5FA 98.61%);
+        z-index: -1;
+        @include transition(.3s);
+    }
+
+    &:hover {
+        color: $blue;
+        border: 1px solid $blue;
+    }
+
+    &:hover:after {
+        height: 0%;
+        width: 100%;
+    }
+}
+
+.bottomToTop {
+    padding: 5px 10px;
+    position: fixed;
+    bottom: 65px;
+    right: 20px;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all linear .3s;
+    background: $blue;
+    color: #fff;
+    display: none;
+    border: 2px solid $blue;
+
+    &:hover {
+        color: #000;
+        bottom: 85px;
+        background-color: transparent;
+    }
+}
