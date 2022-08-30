@@ -26,7 +26,7 @@
 
                             <td>
                                 <div class="d-flex">
-                                    <a href="{{ route('banner.update', $banner->id) }}"
+                                    <a href="{{ route('banner.edit', $banner->id) }}"
                                         class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-edit"></i></a>
 
                                     <a href="{{ route('banner.destroy', $banner->id) }}"
@@ -37,6 +37,7 @@
                                 <form id="banner-delete" action="{{ route('banner.destroy', $banner->id) }}"
                                     method="POST" class="d-none">
                                     @csrf
+                                    @method('DELETE')
                                 </form>
                             </td>
                         </tr>

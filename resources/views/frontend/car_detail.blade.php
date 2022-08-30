@@ -14,20 +14,19 @@ active
             <div class="col-lg-8">
                 <div class="img-part">
                     <div class="big-image">
-                        <div class="item"><img src="{{ asset('frontend_asset') }}/images/cars.png" alt="cars.png"></div>
-                        <div class="item"><img src="{{ asset('frontend_asset') }}/images/cars-2.jpg" alt="cars.png"></div>
-                        <div class="item"><img src="{{ asset('frontend_asset') }}/images/cars.png" alt="cars.png"></div>
-                        <div class="item"><img src="{{ asset('frontend_asset') }}/images/cars-2.jpg" alt="cars.png"></div>
-                        <div class="item"><img src="{{ asset('frontend_asset') }}/images/cars.png" alt="cars.png"></div>
+                        <div class="item"><img src="{{ asset('assets/images') }}/{{ $details->photo }}" alt="{{ $details->photo }}"></div>
+                        
+                        @foreach($details->galleries as $gallery)
+                        <div class="item"><img src="{{ asset('assets/images') }}/{{ $gallery->photo }}" alt="{{ $gallery->photo }}"></div>
+                        @endforeach
 
 
                     </div>
                     <div class="small-images">
-                        <div class="item"> <img src="{{ asset('frontend_asset') }}/images/cars.png" alt="cars.png"></div>
-                        <div class="item"><img src="{{ asset('frontend_asset') }}/images/cars-2.jpg" alt="cars.png"></div>
-                        <div class="item"> <img src="{{ asset('frontend_asset') }}/images/cars.png" alt="cars.png"></div>
-                        <div class="item"><img src="{{ asset('frontend_asset') }}/images/cars-2.jpg" alt="cars.png"></div>
-                        <div class="item"> <img src="{{ asset('frontend_asset') }}/images/cars.png" alt="cars.png"></div>
+                        <div class="item"><img src="{{ asset('assets/images') }}/{{ $details->photo }}" alt="{{ $details->photo }}"></div>
+                        @foreach($details->galleries as $gallery)
+                        <div class="item"><img src="{{ asset('assets/images') }}/{{ $gallery->photo }}" alt="{{ $gallery->photo }}"></div>
+                        @endforeach
                     </div>
                     <i class="fa-solid fa-arrow-left left"></i>
                     <i class="fa-solid fa-arrow-right right"></i>
@@ -35,20 +34,10 @@ active
 
                 <div class="content-part">
                     <h2 class="heading">
-                        Ford Exploer (2018)
+                        {{ $details->name }}
                     </h2>
                     <h4 class="section-heading">Description</h4>
-                    <p class="description">Tempus viverra orci in felis arcu lacus. Faucibus feugiat tempus, sed
-                        aliquam mauris. Cursus donec vitae pellentesque nisl aliquet sed vel nascetur quam. Lacus,
-                        sit dolor donec netus id tellus. Nisi, ullamcorper mauris arcu aliquam. In in blandit in in
-                        sapien vivamus. Est est diam eget tortor. Amet, lacinia lectus vitae tristique. Platea mi
-                        viverra elementum sapien at ullamcorper risus nulla. Ultrices lacus a, pharetra phasellus a
-                        ipsum sit orci enim. Interdum quam ullamcorper vivamus nulla vitae nulla. Arcu in et auctor
-                        diam volutpat, posuere. Tincidunt volutpat ut nulla egestas. Nec et mauris consequat lectus
-                        libero viverra aliquet ullamcorper. Amet at quis velit ornare tristique vestibulum id
-                        dictum. Sagittis porta malesuada urna odio eu orci vestibulum, in. Facilisi malesuada lacus
-                        nulla pellentesque vitae nisl. Praesent mattis nisl leo nam leo viverra commodo. Sed sit
-                        ultricies placerat amet mauris. Sit gravida id aliquam nunc.</p>
+                    <p class="description">{{ $details->description }}</p>
                     <a href="#" class="read-more-btn">Read More <i class="fa-solid fa-arrow-right"></i> </a>
                     <div class="features-part">
                         <h4 class="features-title">Features</h4>
@@ -109,7 +98,7 @@ active
                 <div class="text-part">
                     <div class="row price-heading">
                         <div class="col-lg-12">
-                            <h3 class="title">$ 2400.00</h3>
+                            <h3 class="title">$ {{ $details->price }}</h3>
                         </div>
                     </div>
                     <div class="row middle-part">
@@ -120,35 +109,35 @@ active
                             <p class="left-text"><i class="fa-solid fa-calendar"></i> Year/Årgang</p>
                         </div>
                         <div class="col-lg-6 box">
-                            <p class="right-text">2020</p>
+                            <p class="right-text">{{ $details->year }}</p>
                         </div>
                         <div class="col-lg-6 box">
                             <p class="left-text"><i class="fa-solid fa-map"></i> Kilometer</p>
                         </div>
                         <div class="col-lg-6 box">
-                            <p class="right-text">24000Km</p>
+                            <p class="right-text">{{ $details->kilometer }}</p>
                         </div>
                         <div class="col-lg-6 box">
                             <p class="left-text"><i class="fa-solid fa-gauge"></i> KM//L</p>
                         </div>
                         <div class="col-lg-6 box">
-                            <p class="right-text">24000Km</p>
+                            <p class="right-text">{{ $details->kilometer_liter }}</p>
                         </div>
                         <div class="col-lg-8 box">
                             <p class="left-text"><i class="fa-solid fa-gas-pump"></i> Fuel type (Brændstof)</p>
                         </div>
                         <div class="col-lg-4 box">
-                            <p class="right-text">24000Km</p>
+                            <p class="right-text">{{ $details->fuel_type }}</p>
                         </div>
                         <div class="col-lg-6 box last-box">
                             <p class="left-text"><i class="fa-solid fa-note-sticky"></i>Gron Ejerafgift</p>
                         </div>
                         <div class="col-lg-6 box">
-                            <p class="right-text">24000Km</p>
+                            <p class="right-text">{{ $details->gron_ejerafgift }}</p>
                         </div>
 
                         <div class="col-lg-12">
-                            <a href="#" class="contact-btn">Kontakt os</a>
+                            <a href="{{ route('contact') }}" class="contact-btn">Kontakt os</a>
                         </div>
                     </div>
                     <div class="row contact-info">

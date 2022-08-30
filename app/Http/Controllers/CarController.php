@@ -79,7 +79,11 @@ class CarController extends Controller
      */
     public function edit(Car $car)
     {
-        return view('backend.car.edit', compact('car'));
+        $car = Car::find($car->id);
+        return view('backend.car.edit',[
+            'car' => $car,
+            'features' => json_decode($car->features,true),
+        ]);
     }
 
     /**
@@ -109,7 +113,7 @@ class CarController extends Controller
     public function destroy(Car $car)
     {
         $this->repository->delete($car);
-        return redirect()->route('car.index')->withSuccess(__('Car Deleted Successfully.'));
+        return back()->withSuccess(__('Car Deleted Successfully.'));
     }
 
     
@@ -122,6 +126,6 @@ class CarController extends Controller
     public function galleryDelete(Gallery $gallery)
     {
         $this->repository->galleryDelete($gallery);
-        return redirect()->back()->withSuccess(__('Successfully Deleted From Gallery.'));
+        return back()->withSuccess(__('Successfully Deleted From Gallery.'));
     }
 }

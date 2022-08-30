@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
+use App\Models\Car;
 use App\Models\Contact;
 use App\Models\Sell_car;
 use Illuminate\Http\Request;
@@ -9,16 +11,23 @@ use Illuminate\Http\Request;
 class FrontendController extends Controller
 {
     public function index() {
-        return view('frontend.index');
+        return view('frontend.index', [
+            'banners' => Banner::latest()->get(),
+            'cars' => Car::take(12)->get()
+        ]);
     }
     public function about() {
         return view('frontend.about');
     }
     public function car() {
-        return view('frontend.car');
+        return view('frontend.car', [
+            'cars' => Car::latest()->get()
+        ]);
     }
-    public function cardetail($slug) {
-        return view('frontend.car_detail');
+    public function cardetails($slug) {
+        
+        $details = Car::where('slug', $slug)->firstOrFail();
+        return view('frontend.car_detail', compact('details'));
     }
     public function sellcar() {
         return view('frontend.sell_car');

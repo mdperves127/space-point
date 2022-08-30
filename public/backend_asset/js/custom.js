@@ -1,3 +1,34 @@
+
+    // Appending Features To Items
+    $('.add-features').on('click',function(){
+        var text = $(this).data('text');
+        $('#features').append(`
+        <div class="d-flex">
+        <div class="flex-grow-1">
+        <div class="form-group">
+            <input type="text" class="form-control"
+                name="features[]"
+                placeholder="${text}" value="">
+            </div>
+    </div>
+    <div class="flex-btn">
+                <button type="button"
+                    class="btn btn-danger remove-features">
+                    <i class="fa fa-minus"></i>
+                </button>
+            </div>
+    </div>
+        `);
+
+        $('.social-picker').iconpicker();
+
+    });
+	
+    $(document).on('click','.remove-features',function(){
+        $(this).parent().parent().remove();
+    });
+
+
 /**
 Core script to handle the entire theme and core functions
 **/

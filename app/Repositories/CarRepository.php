@@ -89,7 +89,7 @@ class CarRepository
                 $this->galleryDelete($gallery);
             }
         }
-        $photo_path = 'assets/images/' . $car->main_photo;
+        $photo_path = 'assets/images/' . $car->photo;
 
         ImageHelper::handleDeleteImage($photo_path);
         $car->delete();

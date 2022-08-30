@@ -74,9 +74,8 @@ class BannerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Banner $banner)
     {
-        $banner = Banner::find($id)->get();
         return view('backend.banner.edit', compact('banner'));
     }
 

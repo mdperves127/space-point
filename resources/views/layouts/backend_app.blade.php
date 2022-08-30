@@ -132,6 +132,11 @@
                             <span class="nav-text">Banner</span>
                         </a>
                     </li>
+                    <li><a href="{{ route('car.index') }}" class="ai-icon" aria-expanded="false">
+                            <i class="fa fa-list-ol" aria-hidden="true"></i>
+                            <span class="nav-text">Car</span>
+                        </a>
+                    </li>
                     <li><a href="{{ route('dashboard.contact') }}" class="ai-icon" aria-expanded="false">
                             <i class="fa fa-list-ol" aria-hidden="true"></i>
                             <span class="nav-text">Contact Form</span>
@@ -197,6 +202,7 @@
     <script src="{{ asset('backend_asset') }}/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
     <script src="{{ asset('backend_asset') }}/vendor/chart.js/Chart.bundle.min.js"></script>
     <script src="{{ asset('backend_asset') }}/js/custom.min.js"></script>
+    <script src="{{ asset('backend_asset') }}/js/custom.js"></script>
     <script src="{{ asset('backend_asset') }}/js/deznav-init.js"></script>
     <script src="{{ asset('backend_asset') }}/vendor/owl-carousel/owl.carousel.js"></script>
 

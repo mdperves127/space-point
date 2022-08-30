@@ -125,7 +125,7 @@
     </div>
   </section>
   <div class="end-footer text-center">
-    <p>©Copyright car company | Developed by <a href="https://futureinltd.com/">Future Innovation LTD</a>
+    <p>©All right reserved 2022</a>
     </p>
   </div>
   <!-- top to bottom -->
